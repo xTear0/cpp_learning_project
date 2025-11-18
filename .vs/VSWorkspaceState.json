@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\source",
+    "\\source\\private",
+    "\\source\\private\\Character",
+    "\\source\\private\\inventory",
+    "\\source\\private\\inventory\\InventoryComponent",
+    "\\source\\private\\inventory\\ItemComponent",
+    "\\source\\public",
+    "\\source\\public\\character",
+    "\\source\\public\\inventory"
+  ],
+  "SelectedNode": "\\source\\private\\inventory\\InventoryComponent\\CLP_InventoryComponent.cpp",
+  "PreviewInSolutionExplorer": false
+}
