@@ -1,8 +1,10 @@
 // Copyright xTear Studios
 /*-------------------------------------------------------------------------*/
 #include "Core/Game/CLP_Game.h"
-
 #include <iostream>
+
+using namespace std;
+
 
 /*-------------------------------------------------------------------------*/
 /*  Constructor/Destructor                                                */
@@ -10,10 +12,12 @@
 CLP_Game::CLP_Game()
     : bIsRunning(false)
 {
+    Hero = new CLP_Hero();
 }
 
 CLP_Game::~CLP_Game()
 {
+    delete Hero;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -21,12 +25,25 @@ CLP_Game::~CLP_Game()
 /*-------------------------------------------------------------------------*/
 bool CLP_Game::Initialize()
 {
-    std::cout << "==================================" << std::endl;
-    std::cout << "   C++ Learning Project (CLP)    " << std::endl;
-    std::cout << "==================================" << std::endl;
-    std::cout << std::endl;
+    cout << "==================================" << '\n';
+    cout << "   C++ Learning Project (CLP)     " << '\n';
+    cout << "==================================" << '\n';
+    cout << '\n';
     
     bIsRunning = true;
+    // Ask for a username and create a player class.
+    string username;
+    cout << "> Enter a character username: ";
+    cout << '\n';
+    getline(cin, username);
+    Hero->SetName(username);
+    
+    cout << '\n';
+    cout << "Welcome, " << username << ", to the game world of C++ programming!" << '\n';
+    cout << "In this game, you can run commands, move around, and explore!" << '\n';
+    cout << "For hints and commands, run 'help' and to end the program type 'quit'." << '\n';
+    cout << '\n';
+    
     return true;
 }
 
@@ -39,18 +56,17 @@ void CLP_Game::Run()
     {
         ProcessInput();
         Update();
-        Render();
     }
 }
 
 /*-------------------------------------------------------------------------*/
-/*  Process Input                                                         */
+/*  Process Input                                                          */
 /*-------------------------------------------------------------------------*/
 void CLP_Game::ProcessInput()
 {
-    std::string input;
-    std::cout << "> Enter command (type 'help' for commands, 'quit' to exit): ";
-    std::getline(std::cin, input);
+    string input;
+    cout << "> Enter command (type 'help' for commands, 'quit' to exit): ";
+    getline(cin, input);
     
     if (input == "quit" || input == "exit")
     {
@@ -58,19 +74,43 @@ void CLP_Game::ProcessInput()
     }
     else if (input == "help")
     {
-        std::cout << "\nAvailable commands:" << std::endl;
-        std::cout << "  help  - Show this help menu" << std::endl;
-        std::cout << "  quit  - Exit the game" << std::endl;
-        std::cout << std::endl;
+        PrintHelpMenu();
+    }
+    else if (input == "inventory")
+    {
+        Hero->GetInventory()->ListItems();
+    }
+    else if (input == "give")
+    {
+        string item;
+        cout << "> Enter item: ";
+        cin >> item;
+        cout << "Requested item: " << item << '\n';
+        if (item == "RedPotion")
+        {
+            Hero->GetInventory()->AddItem("Red Potion", 1);
+        }
     }
     else if (!input.empty())
     {
-        std::cout << "Unknown command: " << input << std::endl;
+        cout << "Unknown command: " << input << '\n';
     }
 }
 
+void CLP_Game::PrintHelpMenu()
+{
+    cout << "\nAvailable commands:" << '\n';
+    cout << "  help                - Prints this menu."                << '\n';
+    //cout << "  move 'direction'    - Moves your character (n,s,e,w)."  << '\n';
+    //cout << "  attack 'item'       - Attacks nearby enemy with item."  << '\n';
+    cout << "  inventory           - List items in your inventory."     << '\n';
+    cout << "  give                - Gives you a specified item."  << '\n';
+    cout << "  quit                - Exit out of the game thread."     << '\n';
+    cout << '\n';
+}
+
 /*-------------------------------------------------------------------------*/
-/*  Update                                                                */
+/*  Update                                                                 */
 /*-------------------------------------------------------------------------*/
 void CLP_Game::Update()
 {
@@ -78,19 +118,13 @@ void CLP_Game::Update()
 }
 
 /*-------------------------------------------------------------------------*/
-/*  Render                                                                */
-/*-------------------------------------------------------------------------*/
-void CLP_Game::Render()
-{
-    // Display updates will go here
-}
-
-/*-------------------------------------------------------------------------*/
-/*  Shutdown                                                              */
+/*  Shutdown                                                               */
 /*-------------------------------------------------------------------------*/
 void CLP_Game::Shutdown()
 {
-    std::cout << "\nShutting down game..." << std::endl;
-    std::cout << "Goodbye!" << std::endl;
+    cout << "\nShutting down game..." << '\n';
+    cout << "Goodbye!" << '\n';
 }
 /*-------------------------------------------------------------------------*/
+
+

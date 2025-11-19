@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Hero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|solutionrelative:Source\\Private\\Character\\CLP_Hero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|solutionrelative:Source\\Private\\Character\\CLP_Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_CharacterBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B3E4F5A6-7C8D-4E9F-A1B2-C3D4E5F6A7B8}|CLP_LearningProject.vcxproj|solutionrelative:Source\\Private\\Character\\CLP_CharacterBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CLP_Hero.cpp",
+              "DocumentMoniker": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Hero.cpp",
+              "RelativeDocumentMoniker": "Source\\Private\\Character\\CLP_Hero.cpp",
+              "ToolTip": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Hero.cpp",
+              "RelativeToolTip": "Source\\Private\\Character\\CLP_Hero.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T22:03:35.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CLP_Enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Enemy.cpp",
+              "RelativeDocumentMoniker": "Source\\Private\\Character\\CLP_Enemy.cpp",
+              "ToolTip": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_Enemy.cpp",
+              "RelativeToolTip": "Source\\Private\\Character\\CLP_Enemy.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T22:03:13.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CLP_CharacterBase.cpp",
+              "DocumentMoniker": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_CharacterBase.cpp",
+              "RelativeDocumentMoniker": "Source\\Private\\Character\\CLP_CharacterBase.cpp",
+              "ToolTip": "C:\\Users\\centa\\OneDrive\\Documents\\GitHub\\cpp_learning_project\\Source\\Private\\Character\\CLP_CharacterBase.cpp",
+              "RelativeToolTip": "Source\\Private\\Character\\CLP_CharacterBase.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T22:02:43.476Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -20,19 +20,19 @@ public:
     
     // Getters
     const std::string& GetName() const { return Name; }
-    int32_t GetLevel() const { return Level; }
+    int GetLevel() const { return Level; }
     EPlayerClass GetPlayerClass() const { return PlayerClass; }
     CLP_InventoryComponent* GetInventory() { return InventoryComponent.get(); }
     
     // Setters
     void SetName(const std::string& NewName) { Name = NewName; }
-    void SetLevel(int32_t NewLevel) { Level = NewLevel; }
+    void SetLevel(int NewLevel) { Level = NewLevel; }
     void SetPlayerClass(EPlayerClass NewClass) { PlayerClass = NewClass; }
     
 private:
     std::string Name;
     std::unique_ptr<CLP_InventoryComponent> InventoryComponent;
-    int32_t Level;
+    int Level;
     EPlayerClass PlayerClass;
 };
 /*-------------------------------------------------------------------------*/

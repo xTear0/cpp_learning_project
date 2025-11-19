@@ -4,13 +4,15 @@
 
 #include <string>
 
+using namespace std;
+
 /*-------------------------------------------------------------------------*/
 /*  Item Base Struct                                                      */
 /*-------------------------------------------------------------------------*/
 struct CLP_Item
 {
-    std::string Name;
-    std::string Description;
+    string Name;
+    string Description;
     
     CLP_Item() 
         : Name("Unknown Item")
@@ -23,6 +25,17 @@ struct CLP_Item
     {}
     
     virtual ~CLP_Item() {}
+};
+
+struct CLP_ItemLight
+{
+    void SetItemName(const string& InName) { Name = InName; }
+    void SetItemDescription(const string& InDescription) { Description = InDescription; }
+    
+private:
+    string Name;
+    string Description;
+    
 };
 
 /*-------------------------------------------------------------------------*/
@@ -41,6 +54,8 @@ struct CLP_RedPotion : public CLP_Item
 struct CLP_BlueberryMuffin : public CLP_Item
 {
     float HungerRestore;
+
+    
     
     CLP_BlueberryMuffin()
         : CLP_Item("Blueberry Muffin", "A delicious muffin that restores hunger.")

@@ -164,7 +164,7 @@ const CLP_ItemComponent* CLP_InventoryComponent::FindItem(const std::string& Ite
     return (it != Items.end()) ? &(*it) : nullptr;
 }
 
-std::unique_ptr<CLP_Item> CLP_InventoryComponent::CreateItemByName(const std::string& ItemName) const
+std::unique_ptr<CLP_Item> CLP_InventoryComponent::CreateItemByName(const std::string& ItemName)
 {
     // Create items based on name
     if (ItemName == "Red Potion")
@@ -182,4 +182,35 @@ std::unique_ptr<CLP_Item> CLP_InventoryComponent::CreateItemByName(const std::st
     
     return nullptr;
 }
+
+void CLP_InventoryComponent::AddItemByData(int ItemID, string ItemName, string ItemDescription, int Amount)
+{
+    if (Amount <= 0) return;
+    
+    // Check if item already exists in inventory
+    CLP_ItemData* Item = FindItem(ItemName);
+    if (existingItem)
+    {
+        existingItem->Amount += Amount;
+        std::cout << "Added " << Amount << " " << ItemName << "(s) to inventory." << std::endl;
+        return;
+    }
+    
+    // Create new item
+    CLP_ItemData NewItem;
+    NewItem.BuildItemFromData(ItemID, ItemName, ItemDescription, Amount);
+    
+    if (!newItem)
+    {
+        std::cout << "Unknown item: " << ItemName << std::endl;
+        return;
+    }
+    
+    // Add new item to inventory
+    Items.emplace_back(std::move(NewItem));
+    
+    std::cout << "Added " << Amount << " " << ItemName << "(s) to inventory." << std::endl;
+    return;
+}
+
 /*-------------------------------------------------------------------------*/

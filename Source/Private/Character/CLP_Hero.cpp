@@ -7,7 +7,7 @@
 /*-------------------------------------------------------------------------*/
 CLP_Hero::CLP_Hero()
     : CLP_CharacterBase()
-    , Name("Unknown Hero")
+    , Name("Unnamed Hero")
     , Level(1)
     , PlayerClass(EPlayerClass::None)
 {

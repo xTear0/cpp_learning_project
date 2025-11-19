@@ -7,10 +7,6 @@
 /*-------------------------------------------------------------------------*/
 int main(int argc, char* argv[])
 {
-    // Print Hello World first as requested
-    std::cout << "Hello World!" << std::endl;
-    std::cout << std::endl;
-    
     // Create game instance
     CLP_Game game;
     

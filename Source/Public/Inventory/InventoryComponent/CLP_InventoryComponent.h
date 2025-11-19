@@ -7,6 +7,8 @@
 #include <string>
 #include <memory>
 
+using namespace std;
+
 /*-------------------------------------------------------------------------*/
 /*  Inventory Component                                                   */
 /*-------------------------------------------------------------------------*/
@@ -18,22 +20,23 @@ public:
     
     // Core inventory functions
     void ListItems() const;
-    bool AddItem(const std::string& ItemName, int32_t Amount = 1);
-    bool RemoveItem(const std::string& ItemName, int32_t Amount = 1);
+    bool AddItem(const std::string& ItemName, int Amount = 1);
+    bool RemoveItem(const std::string& ItemName, int Amount = 1);
     bool InspectItem(const std::string& ItemName) const;
     
     // Utility functions
-    int32_t GetItemCount(const std::string& ItemName) const;
+    int GetItemCount(const std::string& ItemName) const;
     bool HasItem(const std::string& ItemName) const;
     void ClearInventory();
     size_t GetInventorySize() const { return Items.size(); }
     
 private:
-    std::vector<CLP_ItemComponent> Items;
+    vector<CLP_ItemData> Items;
     
     // Helper functions
     CLP_ItemComponent* FindItem(const std::string& ItemName);
     const CLP_ItemComponent* FindItem(const std::string& ItemName) const;
-    std::unique_ptr<CLP_Item> CreateItemByName(const std::string& ItemName) const;
+    static std::unique_ptr<CLP_Item> CreateItemByName(const std::string& ItemName);
+    void AddItemByData(int ItemID, string ItemName, string ItemDescription, int Amount = 1);
 };
 /*-------------------------------------------------------------------------*/

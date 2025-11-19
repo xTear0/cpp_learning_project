@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\source",
-    "\\source\\private",
-    "\\source\\private\\Character",
-    "\\source\\private\\inventory",
-    "\\source\\private\\inventory\\InventoryComponent",
-    "\\source\\private\\inventory\\ItemComponent",
-    "\\source\\public",
-    "\\source\\public\\character",
-    "\\source\\public\\inventory"
+    "\\Source",
+    "\\Source\\Private",
+    "\\Source\\Private\\Character",
+    "\\Source\\Public",
+    "\\Source\\Public\\Character"
   ],
-  "SelectedNode": "\\source\\private\\inventory\\InventoryComponent\\CLP_InventoryComponent.cpp",
+  "SelectedNode": "\\.gitattributes",
   "PreviewInSolutionExplorer": false
 }
