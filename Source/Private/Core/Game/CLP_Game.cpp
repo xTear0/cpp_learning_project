@@ -85,6 +85,8 @@ void CLP_Game::ProcessInput()
     {
         string item;
         int amount;
+        
+        cout << "> Available items: (RedPotion, BlueberryMuffin, SwordOfLegends)" << '\n';
         cout << "> Enter item: ";
         cin >> input;
         cout << "> Enter amount: ";
@@ -122,12 +124,12 @@ void CLP_Game::ProcessInput()
 void CLP_Game::PrintHelpMenu()
 {
     cout << "\nAvailable commands:" << '\n';
-    cout << "  help                - Prints this menu."                << '\n';
-    //cout << "  move 'direction'    - Moves your character (n,s,e,w)."  << '\n';
-    //cout << "  attack 'item'       - Attacks nearby enemy with item."  << '\n';
-    cout << "  inventory           - List items in your inventory."     << '\n';
-    cout << "  give                - Gives you a specified item."  << '\n';
-    cout << "  quit                - Exit out of the game thread."     << '\n';
+    cout << "  help                - Prints this menu."                     << '\n';
+    //cout << "  move 'direction'    - Moves your character (n,s,e,w)."     << '\n';
+    //cout << "  attack 'item'       - Attacks nearby enemy with item."     << '\n';
+    cout << "  inventory           - List items in your inventory."         << '\n';
+    cout << "  give                - Gives you a specified item."           << '\n';
+    cout << "  quit                - Exit out of the game thread."          << '\n';
     cout << '\n';
 }
 
@@ -145,6 +147,5 @@ void CLP_Game::Update()
 void CLP_Game::Shutdown()
 {
     cout << "\nShutting down game..." << '\n';
-    cout << "Goodbye!" << '\n';
 }
 /*-------------------------------------------------------------------------*/
