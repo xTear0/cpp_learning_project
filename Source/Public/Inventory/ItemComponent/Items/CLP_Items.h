@@ -1,75 +1,50 @@
 // Copyright xTear Studios
 /*-------------------------------------------------------------------------*/
 #pragma once
-
-#include <string>
-
-using namespace std;
+#include "../CLP_ItemData.h"
 
 /*-------------------------------------------------------------------------*/
-/*  Item Base Struct                                                      */
+/*  Item Database - Predefined Items                                      */
 /*-------------------------------------------------------------------------*/
-struct CLP_Item
+namespace ItemDatabase
 {
-    string Name;
-    string Description;
+    // Item IDs
+    enum ItemIDs
+    {
+        ID_RED_POTION = 1,
+        ID_BLUEBERRY_MUFFIN = 2,
+        ID_SWORD_OF_LEGENDS = 3
+    };
     
-    CLP_Item() 
-        : Name("Unknown Item")
-        , Description("No description available") 
-    {}
+    // Predefined Items
+    inline CLP_ItemData CreateRedPotion(int Amount = 1)
+    {
+        return CLP_ItemData(
+            ID_RED_POTION,
+            "Red Potion",
+            "A healing potion that restores 50 health.",
+            Amount
+        );
+    }
     
-    CLP_Item(const std::string& ItemName, const std::string& ItemDesc)
-        : Name(ItemName)
-        , Description(ItemDesc)
-    {}
+    inline CLP_ItemData CreateBlueberryMuffin(int Amount = 1)
+    {
+        return CLP_ItemData(
+            ID_BLUEBERRY_MUFFIN,
+            "Blueberry Muffin",
+            "A delicious muffin that restores 25 hunger.",
+            Amount
+        );
+    }
     
-    virtual ~CLP_Item() {}
-};
-
-struct CLP_ItemLight
-{
-    void SetItemName(const string& InName) { Name = InName; }
-    void SetItemDescription(const string& InDescription) { Description = InDescription; }
-    
-private:
-    string Name;
-    string Description;
-    
-};
-
-/*-------------------------------------------------------------------------*/
-/*  Predefined Items                                                      */
-/*-------------------------------------------------------------------------*/
-struct CLP_RedPotion : public CLP_Item
-{
-    float HealAmount;
-    
-    CLP_RedPotion() 
-        : CLP_Item("Red Potion", "A healing potion that restores health.")
-        , HealAmount(50.0f)
-    {}
-};
-
-struct CLP_BlueberryMuffin : public CLP_Item
-{
-    float HungerRestore;
-
-    
-    
-    CLP_BlueberryMuffin()
-        : CLP_Item("Blueberry Muffin", "A delicious muffin that restores hunger.")
-        , HungerRestore(25.0f)
-    {}
-};
-
-struct CLP_SwordOfLegends : public CLP_Item
-{
-    float AttackBonus;
-    
-    CLP_SwordOfLegends()
-        : CLP_Item("Sword of Legends", "A legendary sword with immense power.")
-        , AttackBonus(100.0f)
-    {}
-};
+    inline CLP_ItemData CreateSwordOfLegends(int Amount = 1)
+    {
+        return CLP_ItemData(
+            ID_SWORD_OF_LEGENDS,
+            "Sword of Legends",
+            "A legendary sword with +100 attack power.",
+            Amount
+        );
+    }
+}
 /*-------------------------------------------------------------------------*/

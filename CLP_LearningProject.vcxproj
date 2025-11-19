@@ -149,6 +149,7 @@
     <ClInclude Include="Source\Public\Character\CLP_Enemy.h" />
     <ClInclude Include="Source\Public\Inventory\InventoryComponent\CLP_InventoryComponent.h" />
     <ClInclude Include="Source\Public\Inventory\ItemComponent\CLP_ItemComponent.h" />
+    <ClInclude Include="Source\Public\Inventory\ItemComponent\CLP_ItemData.h" />
     <ClInclude Include="Source\Public\Inventory\ItemComponent\Items\CLP_Items.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

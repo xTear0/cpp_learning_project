@@ -1,6 +1,7 @@
 // Copyright xTear Studios
 /*-------------------------------------------------------------------------*/
 #include "Core/Game/CLP_Game.h"
+#include "Inventory/ItemComponent/Items/CLP_Items.h"
 #include <iostream>
 
 using namespace std;
@@ -83,12 +84,33 @@ void CLP_Game::ProcessInput()
     else if (input == "give")
     {
         string item;
+        int amount;
         cout << "> Enter item: ";
-        cin >> item;
-        cout << "Requested item: " << item << '\n';
-        if (item == "RedPotion")
+        cin >> input;
+        cout << "> Enter amount: ";
+        cin >> amount;
+        
+        cin.ignore(); // Clear the newline from the buffer
+        cout << "Requested item: " << input << " (x" << amount << ")" << '\n';
+        
+        if (input == "RedPotion")
         {
-            Hero->GetInventory()->AddItem("Red Potion", 1);
+            CLP_ItemData RequestedItem = ItemDatabase::CreateRedPotion();
+            Hero->GetInventory()->AddItem(RequestedItem.ID, RequestedItem.Name, RequestedItem.Description, amount);
+        }
+        else if (input == "BlueberryMuffin")
+        {
+            CLP_ItemData RequestedItem = ItemDatabase::CreateBlueberryMuffin();
+            Hero->GetInventory()->AddItem(RequestedItem.ID, RequestedItem.Name, RequestedItem.Description, amount);
+        }
+        else if (input == "SwordOfLegends")
+        {
+            CLP_ItemData RequestedItem = ItemDatabase::CreateSwordOfLegends();
+            Hero->GetInventory()->AddItem(RequestedItem.ID, RequestedItem.Name, RequestedItem.Description, amount);
+        }
+        else
+        {
+            cout << "Unknown item: " << input << '\n';
         }
     }
     else if (!input.empty())
@@ -126,5 +148,3 @@ void CLP_Game::Shutdown()
     cout << "Goodbye!" << '\n';
 }
 /*-------------------------------------------------------------------------*/
-
-
